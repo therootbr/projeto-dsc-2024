@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Teste;
 
 class TesteController extends Controller
 {
@@ -11,7 +12,9 @@ class TesteController extends Controller
      */
     public function index()
     {
-        return view('teste');
+        $dados = Teste::all();
+        //dd($dados); VER SE TA VINDO OS DADOS
+        return view('pages.teste.list',[ 'dados' => $dados]);
     }
 
     /**

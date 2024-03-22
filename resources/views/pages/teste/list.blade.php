@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Teste OK - PAG TESTE</h1>
+    <h1>Listagem de teste</h1>
+    @foreach($dados as $dado)
+        <li>{{ $dado->nome }}</li>
+        <li>{{ $dado->cpf }}</li>
+    @endforeach
 </body>
 </html>
