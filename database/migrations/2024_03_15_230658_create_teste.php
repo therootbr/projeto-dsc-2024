@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->string('cpf', 11)->nullable()->unique();
-            $table->decimal('peso', 3,3)->nullable();
+            $table->decimal('peso', 18,10)->nullable();
             $table->date('data_nascimento')->nullable();
             $table->integer('idade')->nullable();
             $table->timestamps();
